@@ -1,0 +1,38 @@
+<resources>
+    <!-- Day /Light application theme. -->
+    <style name="ScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textColor">#1F1F20</item>
+        <item name="cardBackgroundColor">#ffffff</item>
+        <item name="backgroundColor">#ffffff</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransation</item>
+    </style>
+
+    <!-- Night /Dark application theme. -->
+    <style name="darkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textColor">#FFFFFF</item>
+        <item name="backgroundColor">#1F1F20</item>
+        <item name="cardBackgroundColor">#1F1F20</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransation</item>
+    </style>
+
+    <!--this does the styling of the buttons-->
+    <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
+        <item name="android:buttonStyle">
+            @style/Widget.AppCompat.Button.Borderless.Colored
+        </item>
+        <item name="colorAccent">#FF411F</item>
+    </style>
+    <!--Now we create window animation-->
+    <style name="WindowAnimationTransation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+</resources>

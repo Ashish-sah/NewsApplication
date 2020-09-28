@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/aboutDev"
+            android:icon="@drawable/user"
+            android:title="About Developer" />
+        <item
+            android:id="@+id/dark_mode"
+            android:icon="@drawable/day_and_night"
+            android:title="Toggle Theme" />
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/share"
+            android:title="Share" />
+    </group>
+
+</menu>
