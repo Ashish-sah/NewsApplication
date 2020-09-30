@@ -78,7 +78,7 @@ public class EntertainmentActivity extends AppCompatActivity {
 
     private void fetchEntertainmentNews() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Lodaing news.....");
+        progressDialog.setMessage("Loading news.....");
         progressDialog.show();
         String NewsUrl = "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=d7fb75a0748247aaaf5682632f840de9";
 

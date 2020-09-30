@@ -78,7 +78,7 @@ public class ScienceActivity extends AppCompatActivity {
 
     private void fetchScienceNews() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Lodaing news.....");
+        progressDialog.setMessage("Loading news.....");
         progressDialog.show();
         String NewsUrl ="https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=d7fb75a0748247aaaf5682632f840de9\n";
         StringRequest stringRequest = new StringRequest(Request.Method.GET, NewsUrl,
