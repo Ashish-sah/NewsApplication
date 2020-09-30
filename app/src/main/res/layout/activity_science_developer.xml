@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/AboutDevScreenColor"
+    tools:context=".Science.ScienceDeveloper">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:background="?attr/AboutDevScreenColor"
+                android:cropToPadding="true"
+                android:src="@drawable/profile"
+                app:civ_border_color="#FDFAFA"
+                app:civ_border_width="2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/linkedin_Image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="?attr/AboutDevScreenColor"
+                android:contentDescription="linkedin description"
+                android:onClick="linkedin_Profile_Function"
+                android:src="@drawable/linkedin" />
+
+            <ImageButton
+                android:id="@+id/github_Image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="100dp"
+                android:background="?attr/AboutDevScreenColor"
+                android:contentDescription="github description"
+                android:onClick="github_Profile_Function"
+                android:src="@drawable/github" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="About  Developer"
+            android:textAlignment="center"
+            android:textColor="?attr/textColor"
+            android:textSize="30dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif"
+            android:padding="15dp"
+            android:text="@string/About_Developer"
+            android:textAlignment="center"
+            android:textColor="?attr/textColor"
+            android:textSize="20dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif"
+            android:text="About   App"
+            android:textAlignment="center"
+            android:textColor="?attr/textColor"
+            android:textSize="30dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif"
+            android:padding="15dp"
+            android:text="@string/About_App"
+            android:textAlignment="center"
+            android:textColor="?attr/textColor"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+</ScrollView>

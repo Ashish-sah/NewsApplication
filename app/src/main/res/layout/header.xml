@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:gravity="center"
-    android:background="@color/toolbar_color"
+    android:background="?attr/toolbarColor"
     android:padding="20dp">
 
     <androidx.appcompat.widget.AppCompatImageView

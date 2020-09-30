@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:id="@+id/DrawerLayout"
     android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
     tools:context=".BusinessFolder.BusinessActivity">
@@ -12,12 +13,14 @@
      <RelativeLayout
          android:layout_width="match_parent"
          android:layout_height="match_parent">
+
          <androidx.appcompat.widget.Toolbar
              android:id="@+id/toolbar"
              android:layout_width="match_parent"
              app:title="Business News"
              android:layout_height="wrap_content"
-             />
+             android:background="?attr/toolbarColor"
+             app:titleTextColor="?attr/textColor" />
 
 
          <androidx.recyclerview.widget.RecyclerView
@@ -36,12 +39,15 @@
              android:layout_height="match_parent" />
      </RelativeLayout>
 
-  <com.google.android.material.navigation.NavigationView
+    <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
+        android:background="?attr/backgroundColor"
+        app:itemIconTint="?attr/navigationItemTintColor"
+        app:itemTextColor="?attr/navigationItemColor"
         app:itemIconSize="20dp"
         app:menu="@menu/menu" />
 

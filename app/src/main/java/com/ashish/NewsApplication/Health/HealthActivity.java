@@ -10,7 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,11 +24,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ashish.NewsApplication.BusinessFolder.BusinessActivity;
+import com.ashish.NewsApplication.DayNightPreference;
 import com.ashish.NewsApplication.EntertainmentFolder.EntertainmentActivity;
 import com.ashish.NewsApplication.R;
 import com.ashish.NewsApplication.Science.ScienceActivity;
 import com.ashish.NewsApplication.Sports.SportsActivity;
 import com.ashish.NewsApplication.list_item;
+import com.bestsoft32.tt_fancy_gif_dialog_lib.TTFancyGifDialog;
+import com.bestsoft32.tt_fancy_gif_dialog_lib.TTFancyGifDialogListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -48,9 +53,16 @@ public class HealthActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     static List<list_item> list = new ArrayList<>();
-
+    DayNightPreference dayNightPreference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Making object of class   dayNightPreference
+        dayNightPreference = new DayNightPreference(this);
+        //changing the theme when enabled
+        if (dayNightPreference.loadNightModeState()) {
+            setTheme(R.style.darkTheme);
+        } else
+            setTheme(R.style.ScreenTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health);
         //handler
@@ -61,6 +73,41 @@ public class HealthActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         setupUi();
         fetchHealthNews();
+    }
+
+    /*--------To  avoid closing the application on back pressed  -----------------*/
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+
+        } else {
+            customDialog();
+        }
+    }
+
+    public void customDialog() {
+        new TTFancyGifDialog.Builder(this)
+                .setTitle("Are you sure  want  to Exit this App ? ")
+                .setPositiveBtnText("Exit")
+                .setPositiveBtnBackground("#22b573")
+                .setNegativeBtnText("Cancel")
+                .setNegativeBtnBackground("#c1272d")
+                .setGifResource(R.drawable.tenor)      //pass your gif, png or jpg
+                .isCancellable(true)
+                .OnPositiveClicked(new TTFancyGifDialogListener() {
+                    @Override
+                    public void OnClick() {
+                        finish();
+                    }
+                })
+                .OnNegativeClicked(new TTFancyGifDialogListener() {
+                    @Override
+                    public void OnClick() {
+                    }
+                })
+                .build();
+
     }
 
     private void fetchHealthNews() {
@@ -150,7 +197,6 @@ public class HealthActivity extends AppCompatActivity {
     }
 
     private boolean switchBottomScreen(int id) {
-        //Fragment selectedFragment = null;
         switch (id) {
             case R.id.businessNews: {
                 startActivity(new Intent(getApplicationContext(), BusinessActivity.class));
@@ -189,17 +235,39 @@ public class HealthActivity extends AppCompatActivity {
     private void switchScreen(int id) {
         switch (id) {
             case R.id.aboutDev: {
+                Intent intent = new Intent(getApplicationContext(), HealthDeveloper.class);
+                startActivity(intent);
+                drawerLayout.closeDrawers();
+                finish();
                 break;
             }
             case R.id.dark_mode: {
-
+                //code for setting dark mode
+                //true for dark mode, false for day mode, currently toggling on each click
+                // DayNightPreference dayNightPreference=new DayNightPreference(this);
+                dayNightPreference.setNightModeState(!dayNightPreference.loadNightModeState());
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                restartApp();
                 break;
             }
             case R.id.share: {
-
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                //set the type for the sharing thing ie format
+                sharingIntent.setType("text/plain");
+                String shareBody = "Application source code is available at: " + " \n\n Github : https://github.com/Ashish-sah/News_Application" + "\n\n Follow him on GitHub : https://github.com/Ashish-sah";
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+                drawerLayout.closeDrawers();
                 break;
             }
         }
-
     }
+
+    public void restartApp() {
+        Intent i = new Intent(getApplicationContext(), HealthActivity.class);
+        startActivity(i);
+        finish();
+    }
+
 }

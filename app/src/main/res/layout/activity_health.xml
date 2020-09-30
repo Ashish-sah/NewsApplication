@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="?attr/backgroundColor"
     tools:context=".Health.HealthActivity"
     tools:openDrawer="start">
 
@@ -17,6 +18,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?attr/toolbarColor"
+            app:titleTextColor="?attr/textColor"
             app:title="Health News" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -41,6 +44,9 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
+        android:background="?attr/backgroundColor"
+        app:itemIconTint="?attr/navigationItemTintColor"
+        app:itemTextColor="?attr/navigationItemColor"
         app:itemIconSize="20dp"
         app:menu="@menu/menu" />
 

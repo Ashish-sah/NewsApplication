@@ -5,6 +5,7 @@
     android:id="@+id/DrawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
     android:fitsSystemWindows="true"
     tools:context=".EntertainmentFolder.EntertainmentActivity"
     tools:openDrawer="start">
@@ -17,6 +18,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?attr/toolbarColor"
+            app:titleTextColor="?attr/textColor"
             app:title="Entertainment News" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/Recycler_View"
@@ -34,12 +37,15 @@
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
-         android:id="@+id/navigation_view"
-         android:layout_width="wrap_content"
-         android:layout_height="match_parent"
-         android:layout_gravity="start"
-         app:headerLayout="@layout/header"
-         app:itemIconSize="20dp"
-         app:menu="@menu/menu" />
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="?attr/backgroundColor"
+        app:headerLayout="@layout/header"
+        app:itemIconSize="20dp"
+        app:itemIconTint="?attr/navigationItemTintColor"
+        app:itemTextColor="?attr/navigationItemColor"
+        app:menu="@menu/menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

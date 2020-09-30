@@ -1,4 +1,22 @@
 package com.ashish.NewsApplication.Sports;
+
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -6,29 +24,16 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ashish.NewsApplication.BusinessFolder.BusinessActivity;
+import com.ashish.NewsApplication.DayNightPreference;
 import com.ashish.NewsApplication.EntertainmentFolder.EntertainmentActivity;
 import com.ashish.NewsApplication.Health.HealthActivity;
-import com.ashish.NewsApplication.Health.HealthAdapterClass;
-import  com.ashish.NewsApplication.R;
+import com.ashish.NewsApplication.R;
 import com.ashish.NewsApplication.Science.ScienceActivity;
 import com.ashish.NewsApplication.list_item;
+import com.bestsoft32.tt_fancy_gif_dialog_lib.TTFancyGifDialog;
+import com.bestsoft32.tt_fancy_gif_dialog_lib.TTFancyGifDialogListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -44,6 +49,7 @@ public class SportsActivity extends AppCompatActivity {
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
     BottomNavigationView bottomNavigationView;
+    DayNightPreference dayNightPreference;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -51,6 +57,13 @@ public class SportsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Making object of class   dayNightPreference
+        dayNightPreference = new DayNightPreference(this);
+        //changing the theme when enabled
+        if (dayNightPreference.loadNightModeState()) {
+            setTheme(R.style.darkTheme);
+        } else
+            setTheme(R.style.ScreenTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sports);
         //handler
@@ -182,17 +195,74 @@ public class SportsActivity extends AppCompatActivity {
     private void switchScreen(int id) {
         switch (id) {
             case R.id.aboutDev: {
+                Intent intent = new Intent(getApplicationContext(), SportsDeveloper.class);
+                startActivity(intent);
+                drawerLayout.closeDrawers();
+                finish();
                 break;
             }
             case R.id.dark_mode: {
-
+                //code for setting dark mode
+                //true for dark mode, false for day mode, currently toggling on each click
+                // DayNightPreference dayNightPreference=new DayNightPreference(this);
+                dayNightPreference.setNightModeState(!dayNightPreference.loadNightModeState());
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                restartApp();
                 break;
             }
             case R.id.share: {
-
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                //set the type for the sharing thing ie format
+                sharingIntent.setType("text/plain");
+                String shareBody = "Application source code is available at: " + " \n\n Github : https://github.com/Ashish-sah/News_Application" + "\n\n Follow him on GitHub : https://github.com/Ashish-sah";
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+                drawerLayout.closeDrawers();
                 break;
             }
         }
+    }
+
+    /*--------To  avoid closing the application on back pressed  -----------------*/
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+
+        } else {
+            customDialog();
+        }
+    }
+
+    public void customDialog() {
+        new TTFancyGifDialog.Builder(this)
+                .setTitle("Are you sure  want  to Exit this App ? ")
+                .setPositiveBtnText("Exit")
+                .setPositiveBtnBackground("#22b573")
+                .setNegativeBtnText("Cancel")
+                .setNegativeBtnBackground("#c1272d")
+                .setGifResource(R.drawable.tenor)      //pass your gif, png or jpg
+                .isCancellable(true)
+                .OnPositiveClicked(new TTFancyGifDialogListener() {
+                    @Override
+                    public void OnClick() {
+                        finish();
+                    }
+                })
+                .OnNegativeClicked(new TTFancyGifDialogListener() {
+                    @Override
+                    public void OnClick() {
+                    }
+                })
+                .build();
 
     }
+
+    public void restartApp() {
+        Intent i = new Intent(getApplicationContext(), SportsActivity.class);
+        startActivity(i);
+        finish();
+    }
+
 }

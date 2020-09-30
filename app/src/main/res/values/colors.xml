@@ -3,9 +3,5 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <!--Background color-->
-    <color name="front_Screen_background_color">#00B0FF</color>
-    <!--Toolbar color-->
-    <color name="toolbar_color">#0055FF</color>
-    <color name="devloper_ScreenColor">#74B9FF</color>
+
 </resources>

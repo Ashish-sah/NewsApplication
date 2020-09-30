@@ -2,4 +2,6 @@
     <string name="app_name">NewsApplication</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="About_App">1. Uses Volley Library for networking faster \n 2.Uses CircleImageView fast ImageView perfect for profile images. \n3.Uses Glide Library for image loading from Api</string>
+    <string name="About_Developer">My Name is Ashish Sah currently doing graduation in Computer Science And Engineering.</string>
 </resources>

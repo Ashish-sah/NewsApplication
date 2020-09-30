@@ -6,11 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="?attr/backgroundColor"
     tools:openDrawer="start"
     tools:context=".Science.ScienceActivity">
 
 
-<RelativeLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -18,7 +19,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="Science News" />
+            android:background="?attr/toolbarColor"
+            app:title="Science News"
+            app:titleTextColor="?attr/textColor" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/Recycler_View"
@@ -42,6 +45,9 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
+        android:background="?attr/backgroundColor"
+        app:itemIconTint="?attr/navigationItemTintColor"
+        app:itemTextColor="?attr/navigationItemColor"
         app:itemIconSize="20dp"
         app:menu="@menu/menu" />
 

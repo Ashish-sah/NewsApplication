@@ -9,6 +9,15 @@
         <item name="cardBackgroundColor">#ffffff</item>
         <item name="backgroundColor">#ffffff</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransation</item>
+        <!--Navigation color-->
+        <item name="navigationItemColor">#1F1F20</item>
+        <item name="navigationItemTintColor">#1F1F20</item>
+        <!--Toolbar color-->
+        <item name="toolbarColor">#17E3CF</item>
+        <!--Developer Screen Color-->
+        <item name="AboutDevScreenColor">#17E3CF</item>
+        <!--Splash Screen color-->
+        <item name="SplashScreenColor">#00B0FF</item>
     </style>
 
     <!-- Night /Dark application theme. -->
@@ -16,11 +25,20 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#03DABA</item>
         <item name="textColor">#FFFFFF</item>
         <item name="backgroundColor">#1F1F20</item>
         <item name="cardBackgroundColor">#1F1F20</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransation</item>
+        <!--Navigation color-->
+        <item name="navigationItemColor">#ffffff</item>
+        <item name="navigationItemTintColor">#ffffff</item>
+        <!--Toolbar color-->
+        <item name="toolbarColor">#17E3CF</item>
+        <!--Developer Screen Color-->
+        <item name="AboutDevScreenColor">#17E3CF</item>
+        <!--Splash Screen color-->
+        <item name="SplashScreenColor">#00B0FF</item>
     </style>
 
     <!--this does the styling of the buttons-->
