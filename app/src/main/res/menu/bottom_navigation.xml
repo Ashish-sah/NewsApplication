@@ -4,22 +4,27 @@
         <item
             android:id="@+id/businessNews"
             android:icon="@drawable/business"
+            android:enabled="true"
             android:title="Business" />
         <item
             android:id="@+id/entertainmentNews"
             android:icon="@drawable/entertainment"
+            android:enabled="true"
             android:title="Entertainment" />
         <item
             android:id="@+id/healthNews"
             android:icon="@drawable/health"
+            android:enabled="true"
             android:title="Health" />
         <item
             android:id="@+id/scienceNews"
             android:icon="@drawable/science"
+            android:enabled="true"
             android:title="Science" />
         <item
             android:id="@+id/sportsNews"
             android:icon="@drawable/sports"
+            android:enabled="true"
             android:title="Sports" />
     </group>
 </menu>
