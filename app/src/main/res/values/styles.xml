@@ -53,4 +53,14 @@
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
+    <!--Active and inactive icon-->
+    <style name="stockBottomNavigationView.InActive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">7sp</item>
+        <item name="android:enabled">false</item>
+    </style>
+
+    <style name="stockBottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">13sp</item>
+        <item name="android:enabled">true</item>
+    </style>
 </resources>
