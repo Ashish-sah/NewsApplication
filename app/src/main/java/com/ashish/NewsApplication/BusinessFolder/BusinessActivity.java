@@ -256,7 +256,7 @@ public class BusinessActivity extends AppCompatActivity {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 //set the type for the sharing thing ie format
                 sharingIntent.setType("text/plain");
-                String shareBody = "Application source code is available at: " + " \n\n Github : https://github.com/Ashish-sah/News_Application" + "\n\n Follow him on GitHub : https://github.com/Ashish-sah";
+                String shareBody = "Application source code is available at: " + " \n\n Github : https://github.com/Ashish-sah/NewsApplication" + "\n\n Follow him on GitHub : https://github.com/Ashish-sah";
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
                 startActivity(Intent.createChooser(sharingIntent, "Share via"));
