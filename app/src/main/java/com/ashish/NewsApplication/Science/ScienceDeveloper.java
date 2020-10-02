@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.ashish.NewsApplication.R;
 
@@ -17,6 +18,7 @@ public class ScienceDeveloper extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_science_developer);
+        getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.colorAccent));
 
         linkedin = findViewById(R.id.linkedin_Image);
         github = findViewById(R.id.github_Image);

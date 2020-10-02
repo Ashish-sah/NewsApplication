@@ -12,6 +12,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -66,6 +67,7 @@ public class SportsActivity extends AppCompatActivity {
             setTheme(R.style.ScreenTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sports);
+        getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.colorAccent));
         //handler
         recyclerView = findViewById(R.id.Recycler_View);
         //setting the fixed size of every item in recycler view
