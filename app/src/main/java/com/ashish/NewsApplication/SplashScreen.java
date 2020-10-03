@@ -18,7 +18,6 @@ public class SplashScreen extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.colorAccent));
         //create splash screen
         //this handle delay method
-        //
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
