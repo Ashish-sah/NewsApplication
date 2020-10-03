@@ -9,18 +9,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="250dp"
             android:gravity="center">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
-                android:layout_width="96dp"
-                android:layout_height="96dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:background="?attr/AboutDevScreenColor"
                 android:cropToPadding="true"
                 android:src="@drawable/profile"
@@ -63,16 +63,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
+            android:fontFamily="@font/permanent_marker"
             android:text="About  Developer"
             android:textAlignment="center"
             android:textColor="?attr/textColor"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/viga"
             android:padding="15dp"
             android:text="@string/About_Developer"
             android:textAlignment="center"
@@ -83,17 +85,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/permanent_marker"
             android:text="About   App"
             android:textAlignment="center"
             android:textColor="?attr/textColor"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/viga"
             android:padding="15dp"
             android:text="@string/About_App"
             android:textAlignment="center"
@@ -101,4 +104,5 @@
             android:textSize="20dp" />
 
     </LinearLayout>
+
 </ScrollView>
