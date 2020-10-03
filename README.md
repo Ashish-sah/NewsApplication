@@ -29,8 +29,7 @@
 All contributions  are welcomed .
 
 ## Author
-```
 * **Ashish Sah** <a href="https://www.linkedin.com/in/ashish-sah-943171160/">
   <img align="left" alt="Ashish LinkdeIN" width="22px" height="18px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
 </a>
-```
+
