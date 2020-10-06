@@ -27,7 +27,7 @@
         android:layout_marginTop="30sp"
         android:fontFamily="@font/permanent_marker"
         android:padding="20dp"
-        android:text="Try Again"
+        android:text="@string/try_again"
         android:textAlignment="center"
         android:textColor="?attr/textColor"
         android:textSize="20sp"

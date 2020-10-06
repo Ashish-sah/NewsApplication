@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="News In India"
+                android:text="@string/news_in_india"
                 android:textColor="?attr/textColor"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -42,7 +42,7 @@
                 android:id="@+id/detailsTextViewID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Apps often need to display data in similarly styled containers. These containers are often used in lists to hold each item's information. The system provides the CardView API as an easy way for you show information inside cards that have a consistent look across the platform."
+                android:text="@string/apps_often_need_to_display_data_in_similarly_styled_containers_these_containers_are_often_used_in_lists_to_hold_each_item_s_information_the_system_provides_the_cardview_api_as_an_easy_way_for_you_show_information_inside_cards_that_have_a_consistent_look_across_the_platform"
                 android:textColor="?attr/textColor"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -56,7 +56,7 @@
                 android:id="@+id/shareButtonId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SHARE"
+                android:text="@string/share"
                 android:textSize="20sp"
                 android:theme="@style/PrimaryFlatButton" />
 
@@ -64,7 +64,7 @@
                 android:id="@+id/exploreButtonId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="EXPLORE"
+                android:text="@string/explore"
                 android:textSize="20sp"
                 android:theme="@style/PrimaryFlatButton" />
 

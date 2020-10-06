@@ -30,7 +30,7 @@
             android:gravity="center"
             android:includeFontPadding="true"
             android:padding="5sp"
-            android:text="News"
+            android:text="@string/news"
             android:textSize="80sp"
             android:textStyle="bold|italic" />
 

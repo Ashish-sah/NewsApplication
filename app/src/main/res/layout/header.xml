@@ -23,7 +23,7 @@
         android:layout_marginTop="5dp"
         android:fontFamily="@font/permanent_marker"
         android:padding="2dp"
-        android:text="Ashish Sah"
+        android:text="@string/ashish_sah"
         android:textColor="?attr/textColor"
         android:textSize="30sp"
         android:textStyle="bold" />

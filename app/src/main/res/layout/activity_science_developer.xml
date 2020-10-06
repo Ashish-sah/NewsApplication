@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:background="?attr/AboutDevScreenColor"
-                android:contentDescription="linkedin description"
+                android:contentDescription="@string/linkedin_description"
                 android:onClick="linkedin_Profile_Function"
                 android:src="@drawable/linkedin" />
 
@@ -53,7 +53,7 @@
                 android:layout_gravity="bottom"
                 android:layout_marginStart="100dp"
                 android:background="?attr/AboutDevScreenColor"
-                android:contentDescription="github description"
+                android:contentDescription="@string/github_description"
                 android:onClick="github_Profile_Function"
                 android:src="@drawable/github" />
 
@@ -64,10 +64,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:fontFamily="@font/permanent_marker"
-            android:text="About  Developer"
+            android:text="@string/about_developer"
             android:textAlignment="center"
             android:textColor="?attr/textColor"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -79,17 +79,17 @@
             android:text="@string/About_Developer"
             android:textAlignment="center"
             android:textColor="?attr/textColor"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:fontFamily="@font/permanent_marker"
-            android:text="About   App"
+            android:text="@string/about_app"
             android:textAlignment="center"
             android:textColor="?attr/textColor"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -101,7 +101,7 @@
             android:text="@string/About_App"
             android:textAlignment="center"
             android:textColor="?attr/textColor"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 </ScrollView>
