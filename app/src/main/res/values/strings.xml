@@ -7,7 +7,7 @@
     <string name="try_again">Try Again</string>
     <string name="news">News</string>
     <string name="news_in_india">News In India</string>
-    <string name="apps_often_need_to_display_data_in_similarly_styled_containers_these_containers_are_often_used_in_lists_to_hold_each_item_s_information_the_system_provides_the_cardview_api_as_an_easy_way_for_you_show_information_inside_cards_that_have_a_consistent_look_across_the_platform">Apps often need to display data in similarly styled containers. These containers are often used in lists to hold each item\'s information. The system provides the CardView API as an easy way for you show information inside cards that have a consistent look across the platform.</string>
+    <string name="card_view_text">Apps often need to display data in similarly styled containers. These containers are often used in lists to hold each item\'s information. The system provides the CardView API as an easy way for you show information inside cards that have a consistent look across the platform.</string>
     <string name="explore">EXPLORE</string>
     <string name="share">SHARE</string>
     <string name="ashish_sah">Ashish Sah</string>
