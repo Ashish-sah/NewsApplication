@@ -42,7 +42,7 @@
                 android:id="@+id/detailsTextViewID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/apps_often_need_to_display_data_in_similarly_styled_containers_these_containers_are_often_used_in_lists_to_hold_each_item_s_information_the_system_provides_the_cardview_api_as_an_easy_way_for_you_show_information_inside_cards_that_have_a_consistent_look_across_the_platform"
+                android:text="@string/card_view_text"
                 android:textColor="?attr/textColor"
                 android:textSize="15sp" />
         </LinearLayout>
