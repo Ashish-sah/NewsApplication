@@ -1,9 +1,18 @@
 package com.ashish.NewsApplication.Health;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -74,7 +83,7 @@ public class HealthActivity extends AppCompatActivity {
         //setting layout manager for recycler view
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         setupUi();
-        fetchHealthNews();
+        checkConnection();
     }
 
     /*--------To  avoid closing the application on back pressed  -----------------*/
@@ -187,7 +196,6 @@ public class HealthActivity extends AppCompatActivity {
         });
     }
 
-
     private void setupNavigationView() {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -263,6 +271,48 @@ public class HealthActivity extends AppCompatActivity {
                 drawerLayout.closeDrawers();
                 break;
             }
+        }
+    }
+
+    //To check the connection Status
+    public void checkConnection() {
+        ConnectivityManager manager = (ConnectivityManager)
+                getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        //get Active network info
+        NetworkInfo activeNetwork = manager.getActiveNetworkInfo();
+        //check network status
+        if (null != activeNetwork) {
+            if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI) {
+                fetchHealthNews();
+            }
+            //now it see for mobile data
+            if (activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE) {
+                fetchHealthNews();
+            }
+
+        } else {
+            //Initialize Dialog
+            Dialog dialog = new Dialog(this);
+            //set Content View
+            dialog.setContentView(R.layout.no_internet_available);
+            //set outside touch
+            dialog.setCanceledOnTouchOutside(false);
+            //set dialog width and height
+            dialog.getWindow().setLayout(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
+            // set transparent background
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            // set animation
+            dialog.getWindow().getAttributes().windowAnimations = android.R.style.Animation_Dialog;
+            //Initialize dialog variable
+            Button btnTryAgain = dialog.findViewById(R.id.btnTryAgain);
+            btnTryAgain.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    recreate();
+                }
+            });
+            //Show dialog
+            dialog.show();
         }
     }
 
