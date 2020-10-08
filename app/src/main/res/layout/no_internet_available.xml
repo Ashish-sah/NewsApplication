@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_marginStart="30dp"
-    android:layout_marginEnd="30dp"
-    android:background="@drawable/background"
-    android:orientation="vertical"
-    android:padding="50dp">
+    android:layout_height="wrap_content">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottieAnimationView"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/nointernetconnection"
-        app:lottie_renderMode="automatic" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnTryAgain"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30sp"
-        android:fontFamily="@font/permanent_marker"
-        android:padding="20dp"
-        android:text="@string/try_again"
-        android:textAlignment="center"
-        android:textColor="?attr/textColor"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:theme="@style/PrimaryFlatButton" />
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:padding="50dp">
 
-</LinearLayout>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/nointernetconnection"
+            app:lottie_renderMode="automatic" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnTryAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:fontFamily="@font/permanent_marker"
+            android:padding="20dp"
+            android:text="@string/try_again"
+            android:textAlignment="center"
+            android:textColor="?attr/textColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/PrimaryFlatButton" />
+
+    </LinearLayout>
+</ScrollView>
