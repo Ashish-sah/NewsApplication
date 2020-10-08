@@ -20,6 +20,7 @@
             android:layout_height="250dp"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
+            android:contentDescription="@string/contentDescription"
             android:src="@mipmap/ic_launcher_round" />
 
         <LinearLayout
