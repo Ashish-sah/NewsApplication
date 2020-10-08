@@ -15,5 +15,5 @@
     <string name="github_description">github description</string>
     <string name="about_developer">About Developer</string>
     <string name="about_app">About App</string>
-    <string name="image">image</string>
+    <string name="contentDescription">image</string>
 </resources>
