@@ -84,6 +84,24 @@ public class BusinessActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         //setting layout manager for recycler view
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //This will help you to hide the bottom navigation when scrolling
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0 && bottomNavigationView.isShown()) {
+                    bottomNavigationView.setVisibility(View.GONE);
+                } else if (dy < 0) {
+                    bottomNavigationView.setVisibility(View.VISIBLE);
+
+                }
+            }
+
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+        });
         setupUi();
         checkConnection();
     }
