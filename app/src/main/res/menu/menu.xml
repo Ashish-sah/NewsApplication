@@ -6,15 +6,15 @@
         <item
             android:id="@+id/aboutDev"
             android:icon="@drawable/user"
-            android:title="About Developer" />
+            android:title="@string/menu_about_developer" />
         <item
             android:id="@+id/dark_mode"
             android:icon="@drawable/day_and_night"
-            android:title="Toggle Theme" />
+            android:title="@string/menu_toggle_theme" />
         <item
             android:id="@+id/share"
             android:icon="@drawable/share"
-            android:title="Share" />
+            android:title="@string/menu_share" />
     </group>
 
 </menu>
