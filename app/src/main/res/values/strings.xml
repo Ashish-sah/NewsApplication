@@ -16,4 +16,12 @@
     <string name="about_developer">About Developer</string>
     <string name="about_app">About App</string>
     <string name="contentDescription">image</string>
+    <string name="bottom_menu_business">Business</string>
+    <string name="bottom_menu_entertainment">Entertainment</string>
+    <string name="bottom_menu_health">Health</string>
+    <string name="bottom_menu_science">Science</string>
+    <string name="bottom_menu_sports">Sports</string>
+    <string name="menu_toggle_theme">Toggle Theme</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_about_developer">About Developer</string>
 </resources>
