@@ -302,7 +302,7 @@ public class BusinessActivity extends AppCompatActivity {
         }
         return false;
     }
-    
+
     private void switchScreen(int id) {
         switch (id) {
             case R.id.aboutDev: {
