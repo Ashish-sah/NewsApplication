@@ -55,5 +55,5 @@ dependencies {
     implementation 'com.bestsoft32.tayyab:tt-fancy-gif-dialog:1.0.2'
 
     // Lottie Animation Library
-    implementation 'com.airbnb.android:lottie:3.4.2' // Lottie Animation Library
+    implementation 'com.airbnb.android:lottie:3.4.2'
 }
