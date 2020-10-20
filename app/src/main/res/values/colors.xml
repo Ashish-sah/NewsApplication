@@ -4,5 +4,6 @@
     <color name="colorPrimaryDark">#03DAC5</color>
     <color name="colorAccent">#17E3CF</color>
     <color name="newsExplorer">#ffffff</color>
+    <color name="colorsplash">#037083</color>
 
 </resources>
