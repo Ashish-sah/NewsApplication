@@ -109,7 +109,7 @@ public class ScienceActivity extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading news.....");
         progressDialog.show();
-        String NewsUrl ="https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=d7fb75a0748247aaaf5682632f840de9\n";
+        String NewsUrl = "https://gnews.io/api/v4/search?q=science&token=6fd62d15cb116f9a7b62cf1b370a7ec8";
         StringRequest stringRequest = new StringRequest(Request.Method.GET, NewsUrl,
                 new Response.Listener<String>() {
                     @Override
@@ -123,7 +123,7 @@ public class ScienceActivity extends AppCompatActivity {
                             for (int i = 0; i < jsonArr.length(); i++) {
                                 JSONObject newsDetail = jsonArr.getJSONObject(i);
                                 list_item news = new list_item(
-                                        newsDetail.getString("urlToImage"),
+                                        newsDetail.getString("image"),
                                         newsDetail.getString("title"),
                                         newsDetail.getString("description"),
                                         newsDetail.getString("content"),
