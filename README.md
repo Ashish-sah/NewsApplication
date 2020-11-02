@@ -11,7 +11,14 @@
  * Uses Bottom Navigation to move between the different activities
  ```
  # Application ScreenShots
-<abc> <img src="screenshot/image 1.jpg"></abc>
+<abc> <img src="screenshot/image 1.jpg" width=200></abc>
+<abc> <img src="screenshot/image 2.jpg" width=200></abc>
+<abc> <img src="screenshot/image 3.jpg"width=200></abc>
+<abc> <img src="screenshot/image 4.jpg" width=200></abc>
+<abc> <img src="screenshot/image 5.jpg" width=200></abc>
+<abc> <img src="screenshot/image 6.jpg" width=200></abc>
+<abc> <img src="screenshot/image 7.jpg" width=200></abc>
+
  
  # Prerequisites
  ``` 
