@@ -1,3 +1,5 @@
+<img align="right" alt="GIF"  width="370px" src="Screen Shots/news.gif" />
+
 # News Application
   Android Application which show different categories of news i.e Business News, Sports News.Health News etc with the help of bottom navigation used in the application.
   
@@ -11,13 +13,13 @@
  * Uses Bottom Navigation to move between the different activities
  ```
  # Application ScreenShots
-<abc> <img src="screenshot/image 1.jpg" width=200></abc>
-<abc> <img src="screenshot/image 2.jpg" width=200></abc>
-<abc> <img src="screenshot/image 3.jpg" width=200></abc>
-<abc> <img src="screenshot/image 4.jpg" width=200></abc>
-<abc> <img src="screenshot/image 5.jpg" width=200></abc>
-<abc> <img src="screenshot/image 6.jpg" width=200></abc>
-<abc> <img src="screenshot/image 7.jpg" width=200></abc>
+<abc> <img src="screenshot/image 1.jpg" width=250></abc>
+<abc> <img src="screenshot/image 2.jpg" width=250></abc>
+<abc> <img src="screenshot/image 3.jpg" width=250></abc>
+<abc> <img src="screenshot/image 4.jpg" width=250></abc>
+<abc> <img src="screenshot/image 5.jpg" width=250></abc>
+<abc> <img src="screenshot/image 6.jpg" width=250></abc>
+<abc> <img src="screenshot/image 7.jpg" width=250></abc>
 
  
  # Prerequisites
