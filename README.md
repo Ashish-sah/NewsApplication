@@ -10,7 +10,8 @@
  * Implementation of TTFancyGifDialog (A Beautiful Dialogs Library for Android)
  * Uses Bottom Navigation to move between the different activities
  ```
- ## Application ScreenShots
+ # Application ScreenShots
+<abc> <img src="screenshot/image1.jpg"></abc>
  
  # Prerequisites
  ``` 
