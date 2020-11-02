@@ -1,4 +1,4 @@
-<img align="right" alt="GIF"  width="370px" src="Screen Shots/news.gif" />
+<img align="right" alt="GIF"  width="300" src="screenshot/icon.gif" />
 
 # News Application
   Android Application which show different categories of news i.e Business News, Sports News.Health News etc with the help of bottom navigation used in the application.
