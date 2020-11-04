@@ -26,6 +26,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -59,11 +60,13 @@ public class HealthActivity extends AppCompatActivity {
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
     BottomNavigationView bottomNavigationView;
-
+    boolean showProgressDialog = true;
+    private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     static List<list_item> list = new ArrayList<>();
     DayNightPreference dayNightPreference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //Making object of class   dayNightPreference
@@ -76,6 +79,19 @@ public class HealthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health);
         getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.colorAccent));
+        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swiperefresh);
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.pDarkGreen, R.color.pDarskSlowGreen, R.color.pLightGreen, R.color.pFullLightGreen);
+        mSwipeRefreshLayout.setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        showProgressDialog = false;
+                        //call the fetchBusinessNews function here like this.
+                        fetchHealthNews();
+                        mSwipeRefreshLayout.setRefreshing(false);
+                    }
+                }
+        );
         //handler
         recyclerView = findViewById(R.id.Recycler_View);
         //setting the fixed size of every item in recycler view
@@ -141,8 +157,11 @@ public class HealthActivity extends AppCompatActivity {
 
     private void fetchHealthNews() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Loading news.....");
-        progressDialog.show();
+        if (showProgressDialog) {
+            showProgressDialog = true;
+            progressDialog.setMessage("Loading news.....");
+            progressDialog.show();
+        }
         String NewsUrl = "https://gnews.io/api/v4/search?q=health&token=6fd62d15cb116f9a7b62cf1b370a7ec8";
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, NewsUrl,

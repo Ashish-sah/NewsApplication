@@ -5,5 +5,9 @@
     <color name="colorAccent">#17E3CF</color>
     <color name="newsExplorer">#ffffff</color>
     <color name="colorsplash">#037083</color>
-
+    <!--customizing swipe to refersh-->
+    <color name="pDarkGreen">#8ec549</color>
+    <color name="pDarskSlowGreen">#c1f57f</color>
+    <color name="pLightGreen">#f7ffed</color>
+    <color name="pFullLightGreen">#d6d4d4</color>
 </resources>

@@ -21,14 +21,23 @@
             android:background="?attr/toolbarColor"
             app:titleTextColor="?attr/textColor"
             app:title="Entertainment News" />
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/Recycler_View"
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/toolbar"
-            android:layout_marginTop="5dp"
-            android:padding="10dp"
-            android:scrollbars="vertical" />
+            android:layout_below="@+id/toolbar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Recycler_View"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:scrollbars="vertical" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
         <include
             layout="@layout/app_bar"
             android:layout_width="match_parent"
