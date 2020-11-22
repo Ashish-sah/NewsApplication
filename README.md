@@ -35,8 +35,8 @@
 * Java
 
 ## App Download link
-You can download the app fom this link 
-<a href="github.com/Ashish-sah/NewsApplication/blob/master/Apk/app-debug.apk">
+You can download the app fom this link :- 
+<a href="github.com/Ashish-sah/NewsApplication/blob/master/Apk/app-debug.apk">Download </a>
 
 ## Contributing
 
