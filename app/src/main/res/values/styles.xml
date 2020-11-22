@@ -1,6 +1,6 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Day /Light application theme. -->
-    <style name="ScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="ScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -21,7 +21,7 @@
     </style>
 
     <!-- Night /Dark application theme. -->
-    <style name="darkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="darkTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -42,7 +42,7 @@
     </style>
 
     <!--this does the styling of the buttons-->
-    <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
+    <style name="PrimaryFlatButton" parent="Theme.MaterialComponents.Light">
         <item name="android:buttonStyle">
             @style/Widget.AppCompat.Button.Borderless.Colored
         </item>
@@ -54,12 +54,12 @@
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
     <!--Active and inactive icon-->
-    <style name="stockBottomNavigationView.InActive" parent="@style/TextAppearance.AppCompat.Caption">
+    <style name="stockBottomNavigationView.InActive" parent="@style/TextAppearance.MaterialComponents.Caption">
         <item name="android:textSize">7sp</item>
         <item name="android:enabled">false</item>
     </style>
 
-    <style name="stockBottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+    <style name="stockBottomNavigationView.Active" parent="@style/TextAppearance.MaterialComponents.Caption">
         <item name="android:textSize">12sp</item>
         <item name="android:enabled">true</item>
     </style>
