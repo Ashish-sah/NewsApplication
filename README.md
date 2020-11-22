@@ -36,7 +36,7 @@
 
 ## App Download link
 You can download the app fom this link 
-github.com/Ashish-sah/NewsApplication/blob/master/Apk/app-debug.apk
+<a href="github.com/Ashish-sah/NewsApplication/blob/master/Apk/app-debug.apk">
 
 ## Contributing
 
